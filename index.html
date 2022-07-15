@@ -1,7 +1,387 @@
+<!doctype html>
 <html>
-  <head>
-  <body>
-    <h1><center>  M Y  P O R T F O L I O  </center></H1>
-    </body>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <title>Portafolio</title>
+
+	
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '8.1.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+															'ga-disable-UA-205125092-1',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if ( type === 'event' ) {
+							
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer.apply( null, arguments );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+															__gtagTracker( 'config', 'UA-205125092-1', {"forceSSL":"true","link_attribution":"true"} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+			
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+<style id='elementor-frontend-inline-css' type='text/css'>
+@font-face{font-family:eicons;src:url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://edgaruxui.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel='stylesheet' id='elementor-post-1363-css'  href='https://edgaruxui.com/wp-content/uploads/elementor/css/post-1363.css?ver=1635174809' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2125-css'  href='https://edgaruxui.com/wp-content/uploads/elementor/css/post-2125.css?ver=1635792508' type='text/css' media='all' />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:400,500&#038;display=swap&#038;ver=1626301477" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500&#038;display=swap&#038;ver=1626301477" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500&#038;display=swap&#038;ver=1626301477" /></noscript><link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.0' type='text/css' media='all' />
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+
+</script>
+<script type='text/javascript' src='https://edgaruxui.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.1.0' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' src='https://edgaruxui.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://edgaruxui.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://edgaruxui.com/wp-content/themes/trydo/assets/js/vendor/stellar.js?ver=1.1.0' id='stellar-js'></script>
+<script type='text/javascript' src='https://edgaruxui.com/wp-content/themes/trydo/assets/js/plugins/parallax.js?ver=1.1.0' id='parallax-js'></script>
+<link rel="https://api.w.org/" href="https://edgaruxui.com/wp-json/" /><link rel="alternate" type="application/json" href="https://edgaruxui.com/wp-json/wp/v2/pages/2125" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://edgaruxui.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://edgaruxui.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0" />
+<link rel='shortlink' href='https://edgaruxui.com/?p=2125' />
+<link rel="alternate" type="application/json+oembed" href="https://edgaruxui.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedgaruxui.com%2Fportafolio%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://edgaruxui.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedgaruxui.com%2Fportafolio%2F&#038;format=xml" />
+<meta name="framework" content="Redux 4.1.26" /><!-- Hotjar Tracking Code for https://edgaruxui.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2577050,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+		<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:2577050,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		        <!--Customizer CSS-->
+        <style type="text/css">
+
+            /************************************************************************************
+             * General
+             ************************************************************************************/
+            /* Primary [#702FFF] */
+            :root { --color-primary:#0031ff; }            :root { --color-primary-light:#f2f3ff; }            :root { --color-primary-from:#0031ff; }            :root { --color-primary-to:#6080ff; }
+            button.rn-button-style--2:hover, a.rn-button-style--2:hover, a.wp-block-button__link:hover, input[type=submit]:hover { box-shadow: 0 10px 15px 0 rgba(0,49,255,0.1); }
+            /* Gradient Angle */
+            .single-service.service__style--4::before { background-image: linear-gradient(90deg, #0031ff, #6080ff); }            .theme-gradient { background-image: linear-gradient(145deg, #0031ff, #6080ff); }            .single-service.service__style--2 a::before { background-image: linear-gradient(to right, #0031ff, #6080ff); }
+            /* Gradient Percentage */
+            .portfolio .thumbnail-inner::before { background-image: linear-gradient(#0031ff 10%, #000000 100%); }            .blog.blog-style--1 .thumbnail a::after { background-image: linear-gradient(#0031ff 10%, #000000 100%); }
+            /* Gradient Angle Percentage */
+            .footer-default .footer-left { background-image: linear-gradient(145deg, #0031ff 10%, #6080ff 100%); }            .call-to-action, .blog-single-page-title .title, .breadcrumb-inner .title, .rn-pricing::before, .single-service.service__style--4::before, .single-service.service__style--5::before { background-image: linear-gradient(145deg, #0031ff 0%, #6080ff 100%); }            .team .thumbnail::after { background-image: linear-gradient(to bottom, #0031ff 0, #000000 100%); }            .rn-pagination .post-page-numbers.current, .page-links .post-page-numbers.current, .rn-pagination .post-page-numbers::before, .page-links .post-page-numbers::before, .rn-pagination ul.page-numbers li .current, .rn-pagination ul.page-list li .current, .rn-pagination ul.page-numbers li a::before, .rn-pagination ul.page-list li a::before { background-image: linear-gradient(-259deg, #0031ff 0, #6080ff 100%); }
+
+
+            /************************************************************************************
+            * Header
+            ************************************************************************************/
+            /* Link Color */
+                        
+            /* Link Color after sticky and dropdown */
+            .header-area.sticky-bg-black.header--sticky.sticky .header-wrapper .mainmenunav ul.mainmenu > li > a, .header-area.sticky-bg-black.header--sticky.sticky .header-wrapper a.rn-btn, .mainmenunav ul.mainmenu > li ul.submenu li > a, .header-area.header--sticky.sticky ul.social-share.social-style--2.color-black li a, .header-area.header-style-two.header--sticky.sticky .mainmenunav ul.mainmenu > li > a,  .header-area.header-style-two.sticky .header-wrapper a.rn-btn, .active-dark .header-area.header--sticky.sticky .header-wrapper a.rn-btn { color  :#666666; }            .header-area.sticky-bg-black.header--sticky.sticky .header-wrapper a.rn-btn, .header-area.header-style-two.sticky .header-wrapper a.rn-btn, .active-dark .header-area.header--sticky.sticky .header-wrapper a.rn-btn { border-color  :#666666; }            .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown > a::after { border-top-color  :#666666; }            .header-area.header--sticky.sticky ul.social-share.social-style--2.color-black li a:hover, .header-area.header--sticky.sticky ul.social-share.social-style--2.color-black li a:hover, .header-area.header-style-two.header--sticky.sticky .mainmenunav ul.mainmenu > li:hover > a, .active-dark ul.social-share.social-style--2.color-black li a:hover { color  :#0031ff; }
+            .header-area.sticky-bg-black.header--sticky.sticky, .active-dark .header-area.header--sticky.sticky, .header-area.header--sticky.sticky { background  :#ffffff; }            
+
+            /************************************************************************************
+            * Footer
+            ************************************************************************************/
+            /* Heading Color */
+            
+            /* Text Color */
+            
+            /* Link Color */
+                        
+            /* Copyright Color */
+            
+
+        </style>
+        <!--/Customizer CSS-->
+        <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://edgaruxui.com/wp-content/uploads/2021/06/cropped-Icono-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://edgaruxui.com/wp-content/uploads/2021/06/cropped-Icono-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://edgaruxui.com/wp-content/uploads/2021/06/cropped-Icono-180x180.png" />
+<meta name="msapplication-TileImage" content="https://edgaruxui.com/wp-content/uploads/2021/06/cropped-Icono-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			/* CSS adicional */
+body p, h1, h2, h3, h4, h5, h6 {
+	color: #36395A !important;
+}
+
+.call-to-action .inner h2 {
+	color: white !important;
+}
+
+.elementor-heading-title {
+	line-height: 1.3 !important;
+}
+
+.inner span {
+	color: white !important;
+}
+
+.single-service.service__style--4:hover .content p, .single-service.service__style--5:hover .content p {
+	color: white !important; 
+}
+
+.single-service.service__style--5 .content p {
+	font-size: 17px;
+}
+
+.single-service.service__style--4 .content .title, .single-service.service__style--5 .content .title {
+	color: #36395A !important;
+}
+
+.single-service.service__style--4:hover .content .title, .single-service.service__style--5:hover .content .title {
+	color: #fff !important;
+}
+
+.call-to-action .inner h2 {
+	font-family: Poppins;
+}
+
+.rn-btn {
+	border-radius:25px !important;
+}
+
+.icon svg {
+	outline:currentcolor !important;
+}
+
+.contact-form--1 .thumbnail img {
+	box-shadow:none !important;
+}
+
+.wpcf7-submit {
+	color:white !important;
+	border-radius:25px !important;
+}
+
+.shadow-card {
+	box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+	padding:25px;
+	border-radius:25px;
+	background-color:#fff;
+}
+
+.root-header-not-transparent .rn-page-title-area  {
+	display:none !important;
+}
+
+.header-area {
+	background-color:#fff;
+	box-shadow: 0 .1rem 2rem rgba(0,0,0,.09)!important;
+}
+
+/* CSS de la plantilla */
+
+.footer-widget .menu-quick-link-container ul li {
+    margin: 13px 0;
+}
+.corporate-business-banner .slide.slide-style-2 {
+    padding-bottom: 0;
+}
+@media only screen and (max-width: 767px){
+	.corporate-business-banner .slide.slide-style-2 {
+    padding-top: 0;
+}
+}		</style>
+
+</body>
 </html>
